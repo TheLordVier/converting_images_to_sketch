@@ -7,6 +7,8 @@ def convert_images(input_folder, output_folder):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
+    converted_images = []  # список преобразованных изображений
+
     # Iterate through images in the input folder
     for filename in os.listdir(input_folder):
         if filename.endswith(".jpg") or filename.endswith(".jpeg") or filename.endswith(".png"):
@@ -33,11 +35,24 @@ def convert_images(input_folder, output_folder):
             output_path = os.path.join(output_folder, f"sketch_{os.path.splitext(filename)[0]}.png")
             cv2.imwrite(output_path, sketch)
 
+            # Add the filename to the list of converted images
+            converted_images.append(filename)
+
+    return converted_images
+
 
 if __name__ == '__main__':
     input_folder = "original_images"
     output_folder = "processed_images"
-    convert_images(input_folder, output_folder)
+    converted_images = convert_images(input_folder, output_folder)
 
-# Close all OpenCV windows after processing all images
-cv2.destroyAllWindows()
+    # Print a message indicating the completion of image conversion
+    print("Image conversion completed.")
+
+    # Print the list of converted images
+    print("Converted images:")
+    for image_name in converted_images:
+        print(image_name)
+
+    # Close all OpenCV windows
+    cv2.destroyAllWindows()

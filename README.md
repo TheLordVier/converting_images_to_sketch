@@ -20,7 +20,8 @@ This Python script converts an input image into a sketch using OpenCV.
 ## Installation
 
 To install the required dependencies, run:
-- `pip install -r requirements.txt` 
+
+`pip install -r requirements.txt` 
 
 ## License
 
@@ -28,4 +29,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Authors
 
-- Alexander Mikhailov
+Alexander Mikhailov

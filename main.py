@@ -1,7 +1,7 @@
 import cv2
 
 # Read the input image
-image = cv2.imread("original_images/zidane.jpg")
+image = cv2.imread("original_images/gerrard.jpg")
 
 # Convert the image to grayscale
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -19,7 +19,7 @@ inverted_blur = 255 - blur
 sketch = cv2.divide(gray_image, inverted_blur, scale=256.0)
 
 # Save the sketch image
-cv2.imwrite("processed_images/sketch_zidane.png", sketch)
+cv2.imwrite("processed_images/sketch_gerrard.png", sketch)
 
 # Display the sketch image
 cv2.imshow("Image", sketch)

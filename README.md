@@ -8,18 +8,31 @@ This Python script converts an input image into a sketch using OpenCV.
 
 `git clone git@github.com:TheLordVier/converting_images_to_sketch.git`
 
-2. Once cloned, navigate into the project directory:
+2. Create and activate a virtual environment for this project (optional, but recommended):
+  ```
+  python -m venv venvpython -m venv venv
+  ```
+Activate the virtual environment:
+- On Windows:
+  ```
+  venv\Scripts\activate
+  ```
+- On macOS and Linux:
+  ```
+  source venv/bin/activate
+  ```
+3. Once cloned, navigate into the project directory:
 
 `cd converting_images_to_sketch`
 
-3. Install the required dependencies by running:
+4. Install the required dependencies by running:
 
 `pip install -r requirements.txt` 
 
-4. You are now ready to use the script to convert your images into sketches.
-5. Place your original images in the `original_images` directory.
-6. Run the script `sketch.py`.
-7. The resulting sketch images will be saved in the `processed_images` directory.
+5. You are now ready to use the script to convert your images into sketches.
+6. Place your original images in the `original_images` directory.
+7. Run the script `sketch.py`.
+8. The resulting sketch images will be saved in the `processed_images` directory.
 
 ## Dependencies
 

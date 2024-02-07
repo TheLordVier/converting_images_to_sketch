@@ -7,7 +7,7 @@ def convert_images(input_folder, output_folder):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
-    converted_images = []  # список преобразованных изображений
+    converted_images = []  # list of converted images
 
     # Iterate through images in the input folder
     for filename in os.listdir(input_folder):
